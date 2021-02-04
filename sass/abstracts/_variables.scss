@@ -1,0 +1,34 @@
+/* VARIABLES
+========================*/
+
+$color-primary-blue: #4c66a4;
+$color-primary-blue-light: lighten( #4c66a4, 10%);
+$color-primary-blue-dark: darken( #4c66a4, 15%);
+
+
+$color-primary-white: #e9ebee;
+$color-primary-white-light: lighten(#e9ebee, 10%);
+$color-primary-white-dark: darken(#e9ebee, 10%);
+
+$color-secondary-blue: #084B8A;
+$color-secondary-blue-dark: #08298A;
+
+$color-grey-light-1: #c0c0c0;
+$color-grey-light-2: #999999;
+
+$color-grey-dark-1: #777777;
+$color-grey-dark-2: #434343;
+$color-grey-dark-3: #1d1d1d;
+
+$color-success: #4BB543;
+$color-danger: #d9534f;
+
+$shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+$shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+$line: 1px solid $color-grey-light-1;
+
+$bp-largest: 75em;  //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px 

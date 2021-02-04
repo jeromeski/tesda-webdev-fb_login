@@ -1,0 +1,16 @@
+/* SIGNUP
+========================*/
+
+.signup {
+  &__heading-main {
+    font-size: 3rem;
+    color: #1d1d1d;
+    line-height: 1;
+    margin-top: 2.5rem;
+  }
+  &__heading-sub {
+    font-size: 1.5rem;
+    color: #1d1d1d;
+    margin-bottom: 2rem;
+  }
+}

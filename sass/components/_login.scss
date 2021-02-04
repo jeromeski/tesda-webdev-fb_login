@@ -1,0 +1,107 @@
+/* LOGIN
+========================*/
+
+.login {
+  margin-top: -4px;
+
+  & a:hover {
+    color: white;
+  }
+
+  &__status {
+    line-height: 1;
+    color: red;
+  }
+
+  &__form {
+    display: flex;
+    align-content: center;
+
+    *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__pword-container {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+
+    & span a {
+      padding-top: 5px;
+      font-size: 1.20rem;
+      color: $color-primary-white-dark;
+    }
+  }
+
+  &__label {
+    font-size: 1.20rem;
+  }
+
+  &__btn-wrapper {
+    align-self: center;
+    margin-left: -1rem;
+  }
+
+  &__input {
+    width: 173px;
+    border: 1px solid $color-secondary-blue-dark;
+    height: 25px;
+    background-color: $color-primary-white;
+    text-indent: 1rem;
+
+    &:focus {
+      outline: none;
+      background-color: white;
+    }
+  }
+
+  &__btn {
+    font-size: 1.25rem;
+    margin-top: -4px;
+    height: 2.5rem;
+    width: 5.7rem;
+    background-color: $color-secondary-blue;
+    color:white;
+    border:1px solid $color-secondary-blue-dark;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: lighten($color-secondary-blue, 5%);
+    }
+
+  }
+
+  &__status {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: -.5;
+  }
+  &__reload {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: lighten($color-success,10%);
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+  }
+
+  & .disabled {
+    background-color: #999999;
+    color: #c0c0c0;
+    border: none;
+    cursor: auto;
+  }
+
+  & .success {
+    color: $color-success;
+  }
+
+  & .error {
+    color: $color-danger;
+  }
+}

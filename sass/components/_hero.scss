@@ -1,0 +1,52 @@
+/* HERO
+========================*/
+
+.hero {
+  
+  &__heading-wrapper {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__heading--main {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1d1d1d;
+  }
+
+  &__heading-container {
+
+  }
+
+  &__features {
+
+  }
+
+  &__features-list {
+
+    & > *:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__features-item {
+    display: flex;
+  }
+
+  &__features-icon {
+    margin-right: 1rem;
+  }
+
+  &__heading-sub {
+    color: #1d1d1d;
+
+    & span {
+      font-weight: 400;
+    
+    }
+  }
+
+  
+
+}
