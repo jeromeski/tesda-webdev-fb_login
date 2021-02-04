@@ -25,6 +25,7 @@
     font-size:18px;
     border:1px solid #BDBDBD;
     outline: none;
+    color: $color-grey-light-2;
   }
   &__text-input2 {
     width:225px;
@@ -34,24 +35,29 @@
     font-size:18px;
     border:1px solid #BDBDBD;
     outline: none;
+    color: $color-grey-light-2;
+
+    &:not(:last-of-type) {
+      margin-right: .5rem;
+    }
   }
   &__select {
-
   }
 
   &__select-container {
     display: flex;
-
     & p {
       line-height: 1;
     }
   }
 
+
   &__bday {
 
   }
   &__select-list {
-
+    display: flex;
+    justify-items: auto;
   }
 
   &__select-item {
@@ -59,23 +65,17 @@
     border: silver 1px solid;
     border-bottom: silver 1px solid;
     width: 75px;
-    font-size: 1rem;
+    font-size: 1.75rem;
+    color: $color-grey-light-2;
     background-color: white;
   }
 
-  &__why-wrapper {
-
+  &__why {
+    margin-left: 1rem;
   }
 
-  &__why
-
-  &__radio {
-    & > * {
-      display: inline-block;
-    }
-  }
-
-  &__radio-wrapper {
+  
+  &__rradio-wrapper {
     display: flex;
     align-items: center;
 
@@ -85,7 +85,7 @@
   }
 
   &__terms {
-
+    line-height: 1.5;
   }
 
   &__btn-wrapper {
@@ -115,4 +115,12 @@
     outline: none;
   }
 
+}
+
+.form__rradio {
+  display: flex;
+
+  & > *:not(:last-child) {
+    margin-right: .75rem;
+  }
 }
