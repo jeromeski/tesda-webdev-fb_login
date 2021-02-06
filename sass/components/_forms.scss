@@ -50,6 +50,9 @@
     }
   }
   &__select {
+    &-item {
+      outline: none;
+    }
   }
 
   &__select-container {
@@ -108,7 +111,13 @@
   }
 
   &__terms {
-    line-height: 1.5;
+    line-height: 1.35;
+    letter-spacing: .7px;
+
+    & a {
+      color: $color-primary-blue;
+      font: 600;
+    }
   }
 
   &__btn-wrapper {

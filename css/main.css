@@ -44,7 +44,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: #777777;
@@ -250,6 +250,8 @@ a {
     color: #999999; }
   .form__text-input2:not(:last-of-type) {
     margin-right: .5rem; }
+.form__select-item {
+  outline: none; }
 .form__select-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,7 +299,11 @@ a {
   .form__radio-wrapper > *:not(:last-child) {
     margin-right: .5rem; }
 .form__terms {
-  line-height: 1.5; }
+  line-height: 1.35;
+  letter-spacing: .7px; }
+  .form__terms a {
+    color: #4c66a4;
+    font: 600; }
 .form__btn {
   width: 205px;
   height: 45px;
