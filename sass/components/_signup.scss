@@ -15,15 +15,19 @@
   }
 
   &__create-section {
-
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   &__create-wrapper {
-
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   &__create-link {
-    font-weight: 700;
+    font-size: inherit;
+    font-weight: inherit;
+    color: $color-primary-blue;
 
   }
 }
