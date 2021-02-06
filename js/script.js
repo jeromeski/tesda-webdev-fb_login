@@ -1,36 +1,43 @@
 var username = document.querySelector('input[type="text"]');
-username.addEventListener('focus', function() {
+username.addEventListener('focus', function () {
   login.handleClearWarnings();
 });
 var login = {
-  authUname: 'jeromeski',
-  authPword: '12345',
-  url: 'https://jeromeg-fullstack.github.io/page-under-construction/',
+  authUname: 'admin',
+  authPword: 'password123',
+  url: 'https://jeromeski.github.io/tesda-webdev-facebook-page/',
   counter: 3,
   limit: 0,
   success: 'Login Success! Redirecting...',
   failed: 'Wrong username or password! ',
-  handleClearWarnings: function() {
+  handleClearWarnings: function () {
     document.querySelector('.login__status').innerHTML = '&nbsp;';
   },
-  handleAuth: function() {
+  handleAuth: function (url = this.url) {
     var un = document.querySelector('#uname').value.toLowerCase();
     var pw = document.querySelector('#pword').value;
+    var loginEl = document.querySelector('.login__status');
+    loginEl.style.color = '#5abf52';
+
     if (un === this.authUname && pw === this.authPword) {
-      var loginEl = document.querySelector('.login__status');
-      loginEl.style.color = '#4BB543';
-      loginEl.innerHTML = this.success;
-      var timeOut = setTimeout(() => {
-        window.open(this.url, '_blank');
-        clearTimeout(timeOut);
-        location.reload();
-      }, 1500);
+      var timeleft = 5;
+      var countdownTimer = setInterval(function () {
+        loginEl.innerHTML =
+          '<b></b>Login Success! Redirecting in</b> ' +
+          timeleft +
+          ' <b>seconds</b>';
+        timeleft -= 1;
+        if (timeleft < 0) {
+          clearInterval(countdownTimer);
+          window.location.replace(url);
+        }
+      }, 2000);
     } else {
       this.counter--;
       this.handleFailed();
     }
   },
-  handleFailed: function() {
+  handleFailed: function () {
     var loginErrEl1 = document.querySelector('.login__status');
     if (this.counter === this.limit) {
       loginErrEl1.style.color = '#d9534f';
@@ -48,7 +55,7 @@ var login = {
       }
     }
   },
-  handleTimeOut: function() {
+  handleTimeOut: function () {
     var loginErrEl2 = document.querySelector('.login__status');
     loginErrEl2.style.color = '#d9534f';
     document.querySelector('#uname').disabled = true;
@@ -56,7 +63,7 @@ var login = {
     document.querySelector('#btn-submit').disabled = true;
     document.querySelector('#btn-submit').classList.add('disabled');
     var timeleft = 5;
-    var downloadTimer = setInterval(function() {
+    var downloadTimer = setInterval(function () {
       loginErrEl2.innerHTML =
         'Invalid login attempts detected!  Lockout ends in ' +
         timeleft +
@@ -70,7 +77,7 @@ var login = {
       }
     }, 1000);
   },
-  handleEnableInputs: function() {
+  handleEnableInputs: function () {
     location.reload();
-  }
+  },
 };
