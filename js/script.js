@@ -5,7 +5,7 @@ username.addEventListener('focus', function () {
 var login = {
   authUname: 'admin',
   authPword: 'password123',
-  url: 'https://jeromeski.github.io/tesda-webdev-facebook-page/',
+  url: 'https://jeromeski.github.io/tesda-webdev-fbhome/',
   counter: 3,
   limit: 0,
   success: 'Login Success! Redirecting...',
