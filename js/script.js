@@ -8,7 +8,6 @@ var login = {
   url: 'https://jeromeski.github.io/tesda-webdev-fb_posts/',
   counter: 3,
   limit: 0,
-  success: 'Login Success! Redirecting...',
   failed: 'Wrong username or password! ',
   handleClearWarnings: function () {
     document.querySelector('.login__status').innerHTML = '&nbsp;';
