@@ -15,10 +15,10 @@ var login = {
   handleAuth: function (url = this.url) {
     var un = document.querySelector('#uname').value.toLowerCase();
     var pw = document.querySelector('#pword').value;
-    var loginEl = document.querySelector('.login__status');
-    loginEl.style.color = '#5abf52';
-
     if (un === this.authUname && pw === this.authPword) {
+      var loginEl = document.querySelector('.login__status');
+      loginEl.classList.remove('error');
+      loginEl.classList.add('success');
       var timeleft = 3;
       var countdownTimer = setInterval(function () {
         loginEl.innerHTML =
@@ -38,17 +38,15 @@ var login = {
   },
   handleFailed: function () {
     var loginErrEl1 = document.querySelector('.login__status');
+    loginErrEl1.classList.add('error');
     if (this.counter === this.limit) {
-      loginErrEl1.style.color = '#d9534f';
       this.handleTimeOut();
     } else {
       console.log(this.counter);
       if (this.counter === 1) {
-        loginErrEl1.classList.add('success');
         loginErrEl1.innerHTML =
           this.failed + ' You have ' + this.counter + ' try left.';
       } else {
-        loginErrEl1.classList.add('error');
         loginErrEl1.innerHTML =
           this.failed + 'You have  ' + this.counter + ' tries left.';
       }
