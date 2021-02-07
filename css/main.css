@@ -107,8 +107,7 @@ a {
   .login a:hover {
     color: white; }
   .login__status {
-    line-height: 1;
-    color: red; }
+    line-height: 1; }
   .login__form {
     display: -webkit-box;
     display: -ms-flexbox;

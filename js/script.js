@@ -37,38 +37,38 @@ var login = {
     }
   },
   handleFailed: function () {
-    var loginErrEl1 = document.querySelector('.login__status');
-    loginErrEl1.classList.add('error');
+    var loginEl = document.querySelector('.login__status');
+    loginEl.classList.add('error');
     if (this.counter === this.limit) {
       this.handleTimeOut();
     } else {
       console.log(this.counter);
       if (this.counter === 1) {
-        loginErrEl1.innerHTML =
+        loginEl.innerHTML =
           this.failed + ' You have ' + this.counter + ' try left.';
       } else {
-        loginErrEl1.innerHTML =
+        loginEl.innerHTML =
           this.failed + 'You have  ' + this.counter + ' tries left.';
       }
     }
   },
   handleTimeOut: function () {
-    var loginErrEl2 = document.querySelector('.login__status');
-    loginErrEl2.style.color = '#d9534f';
+    var loginEl = document.querySelector('.login__status');
+    loginEl.classList.add('error');
     document.querySelector('#uname').disabled = true;
     document.querySelector('#pword').disabled = true;
     document.querySelector('#btn-submit').disabled = true;
     document.querySelector('#btn-submit').classList.add('disabled');
     var timeleft = 5;
     var downloadTimer = setInterval(function () {
-      loginErrEl2.innerHTML =
+      loginEl.innerHTML =
         'Invalid login attempts detected!  Lockout ends in ' +
         timeleft +
         ' seconds';
       timeleft -= 1;
       if (timeleft <= 0) {
         clearInterval(downloadTimer);
-        loginErrEl2.innerHTML = '';
+        loginEl.innerHTML = '';
         var el3 = document.querySelector('.login__reload');
         el3.innerHTML = 'Clear lockout <u>here</u>.';
       }
