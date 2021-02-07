@@ -31,7 +31,7 @@ var login = {
           clearInterval(countdownTimer);
           window.location.replace(url);
         }
-      }, 2000);
+      }, 1000);
     } else {
       this.counter--;
       this.handleFailed();
