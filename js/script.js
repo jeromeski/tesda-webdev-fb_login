@@ -18,9 +18,10 @@ var login = {
     if (un === this.authUname && pw === this.authPword) {
       var loginEl = document.querySelector('.login__status');
       loginEl.classList.remove('error');
-      loginEl.classList.add('success');
       var timeleft = 3;
       var countdownTimer = setInterval(function () {
+        var loginEl = document.querySelector('.login__status');
+        loginEl.classList.add('success');
         loginEl.innerHTML =
           '<b></b>Login Success! Redirecting in</b> ' +
           timeleft +
