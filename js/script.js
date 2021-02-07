@@ -4,7 +4,7 @@ username.addEventListener('focus', function () {
 });
 var login = {
   authUname: 'admin',
-  authPword: 'password123',
+  authPword: 'password',
   url: 'https://jeromeski.github.io/tesda-webdev-fb_posts/',
   counter: 3,
   limit: 0,
