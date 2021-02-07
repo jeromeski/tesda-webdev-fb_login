@@ -20,7 +20,7 @@ var login = {
     loginEl.style.color = '#5abf52';
 
     if (un === this.authUname && pw === this.authPword) {
-      var timeleft = 5;
+      var timeleft = 3;
       var countdownTimer = setInterval(function () {
         loginEl.innerHTML =
           '<b></b>Login Success! Redirecting in</b> ' +
