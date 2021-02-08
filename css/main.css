@@ -299,8 +299,7 @@ label {
           justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .form {
-      max-width: 100%;
-      padding: 0 1rem; } }
+      width: 100%; } }
   .form > * {
     margin-bottom: 2rem; }
   .form__input-container {
@@ -335,6 +334,9 @@ label {
     color: #999999; }
     .form__text-input::-webkit-input-placeholder {
       color: #999999; }
+      @media only screen and (max-width: 37.5em) {
+        .form__text-input::-webkit-input-placeholder {
+          font-size: 1.5rem; } }
   .form__text-input2 {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -360,6 +362,9 @@ label {
           margin-right: 0; } }
     .form__text-input2::-webkit-input-placeholder {
       color: #999999; }
+      @media only screen and (max-width: 37.5em) {
+        .form__text-input2::-webkit-input-placeholder {
+          font-size: 1.5rem; } }
   .form__select-item {
     outline: none; }
   .form__select-container {
