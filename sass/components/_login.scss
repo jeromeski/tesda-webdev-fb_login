@@ -2,7 +2,10 @@
 ========================*/
 
 .login {
-  margin-top: -4px;
+  // margin-top: -4px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 
   & a:hover {
     color: white;
@@ -21,8 +24,12 @@
     }
   }
 
+  &__uname-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__pword-container {
-    margin-top: 2px;
     display: flex;
     flex-direction: column;
 
@@ -38,12 +45,15 @@
   }
 
   &__btn-wrapper {
+    margin-top: -3px;
     align-self: center;
     margin-left: -1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   &__input {
-    width: 173px;
+    max-width: 200px;
     border: 1px solid $color-secondary-blue-dark;
     height: 25px;
     background-color: $color-primary-white;
@@ -57,8 +67,7 @@
 
   &__btn {
     font-size: 1.25rem;
-    margin-top: -4px;
-    height: 2.5rem;
+    height: 25px;
     width: 5.7rem;
     background-color: $color-secondary-blue;
     color:white;

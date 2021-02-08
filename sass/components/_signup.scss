@@ -2,21 +2,40 @@
 ========================*/
 
 .signup {
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
   &__heading-main {
     font-size: 3rem;
     color: #1d1d1d;
     line-height: 1;
     margin-top: 2.5rem;
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+    
   }
   &__heading-sub {
     font-size: 1.5rem;
     color: #1d1d1d;
     margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
   }
 
   &__create-section {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding-left: 1.5rem;
+    }
+      
   }
 
   &__create-wrapper {

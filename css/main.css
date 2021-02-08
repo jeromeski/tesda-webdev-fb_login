@@ -16,6 +16,9 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 55%; } }
 
 /* Remove default padding */
 ul[class],
@@ -88,6 +91,9 @@ select {
 a {
   text-decoration: none; }
 
+label {
+  color: white; }
+
 .success {
   color: #4BB543; }
 
@@ -98,12 +104,20 @@ a {
 ========================*/
 .logo {
   height: 4rem;
-  padding: 2.75rem 0; }
+  padding: 2.75rem 0;
+  display: inline; }
 
 /* LOGIN
 ========================*/
 .login {
-  margin-top: -4px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center; }
   .login a:hover {
     color: white; }
   .login__status {
@@ -116,8 +130,15 @@ a {
         align-content: center; }
     .login__form *:not(:last-child) {
       margin-right: 1rem; }
+  .login__uname-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .login__pword-container {
-    margin-top: 2px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,11 +153,19 @@ a {
   .login__label {
     font-size: 1.20rem; }
   .login__btn-wrapper {
+    margin-top: -3px;
     -ms-flex-item-align: center;
         align-self: center;
-    margin-left: -1rem; }
+    margin-left: -1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .login__input {
-    width: 173px;
+    max-width: 200px;
     border: 1px solid #08298A;
     height: 25px;
     background-color: #e9ebee;
@@ -146,8 +175,7 @@ a {
       background-color: white; }
   .login__btn {
     font-size: 1.25rem;
-    margin-top: -4px;
-    height: 2.5rem;
+    height: 25px;
     width: 5.7rem;
     background-color: #084B8A;
     color: white;
@@ -201,18 +229,38 @@ a {
 
 /* SIGNUP
 ========================*/
+@media only screen and (max-width: 37.5em) {
+  .signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center; } }
 .signup__heading-main {
   font-size: 3rem;
   color: #1d1d1d;
   line-height: 1;
   margin-top: 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .signup__heading-main {
+      text-align: center; } }
 .signup__heading-sub {
   font-size: 1.5rem;
   color: #1d1d1d;
   margin-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .signup__heading-sub {
+      text-align: center; } }
 .signup__create-section {
   margin-top: 1.5rem;
   margin-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .signup__create-section {
+      padding-left: 1.5rem; } }
 .signup__create-wrapper {
   font-size: 1.5rem;
   font-weight: 700; }
@@ -223,12 +271,16 @@ a {
 
 /* FORMS
 ========================*/
+@media only screen and (max-width: 37.5em) {
+  .form {
+    padding-left: 1.5rem; } }
 .form > * {
   margin-bottom: 2rem; }
 .form__input-container > *:not(:last-child) {
   margin-bottom: 1rem; }
 .form__text-input {
-  width: 460px;
+  max-width: 460px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   padding-left: 10px;
@@ -239,7 +291,8 @@ a {
   .form__text-input::-webkit-input-placeholder {
     color: #999999; }
 .form__text-input2 {
-  width: 225px;
+  max-width: 226px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   padding-left: 10px;
@@ -328,13 +381,8 @@ a {
   position: relative;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   outline: none; }
-
-.form__rradio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .form__rradio > *:not(:last-child) {
-    margin-right: .75rem; }
+.form label {
+  color: #434343; }
 
 /* CONTAINER
 ========================*/
@@ -352,12 +400,11 @@ a {
 /* HEADER
 ========================*/
 .header {
-  background-color: #4c66a4;
-  width: 100%;
-  color: white; }
+  background-color: #4c66a4; }
   .header__container {
     font-size: 1.4rem;
     max-width: 130rem;
+    width: 100%;
     margin: 0 auto;
     padding: 0 .5rem;
     display: -webkit-box;
@@ -369,6 +416,19 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .header__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding-bottom: 1rem; } }
     .header__container a {
       text-decoration: none;
       display: block;
@@ -377,6 +437,10 @@ a {
       margin-right: auto;
       -webkit-box-sizing: content-box;
               box-sizing: content-box; }
+      @media only screen and (max-width: 37.5em) {
+        .header__container a {
+          margin-right: 0;
+          width: auto; } }
 
 /* CONTENT
 ========================*/
@@ -395,6 +459,10 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 56.25%;
           flex: 0 0 56.25%; }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      display: none;
+      visibility: hidden; } }
 
 /* COL-RIGHT
 ========================*/
