@@ -2,6 +2,10 @@
 ========================*/
 
 .hero {
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 0 2rem;
+  }
   
   &__heading-wrapper {
     margin-top: 8rem;
@@ -13,14 +17,6 @@
     font-weight: 600;
     line-height: 1.25;
     color: #1d1d1d;
-  }
-
-  &__heading-container {
-
-  }
-
-  &__features {
-
   }
 
   &__features-list {

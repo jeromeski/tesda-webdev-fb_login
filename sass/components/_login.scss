@@ -16,12 +16,14 @@
   }
 
   &__form {
+    flex: 0 0 80%;
     display: flex;
     align-content: center;
 
-    *:not(:last-child) {
+    & > *:not(:last-child) {
       margin-right: 1rem;
     }
+
   }
 
   &__uname-container {

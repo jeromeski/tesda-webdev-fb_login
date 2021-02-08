@@ -4,7 +4,7 @@
 .hero{
   flex: 0 0 56.25%;
 
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-medium) {
     display: none;
     visibility: hidden;
   }
